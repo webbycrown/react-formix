@@ -1,210 +1,139 @@
-# React Smart Form Demo
+# 📦 React Formix – Advanced Form and Step-Form Validation Library
 
-A comprehensive demonstration project for [@webbycrown/react-smart-form](https://www.npmjs.com/package/@webbycrown/react-advanced-richtext-editor) built with Next.js.
+A production-ready, flexible, and developer-friendly form and step-form validation library for React (and Next.js). It provides powerful validation rules, extensibility, and seamless integration into modern applications.
 
-## Features Demonstrated
+- ⚛️ React 16.8+ (Hooks) compatible & Next.js friendly
+- 🔒 Built-in validation rules with extensibility
+- 🎯 Lightweight, fast, and easy to integrate
+- 🧑‍💻 Fully controlled with simple API
 
-This demo showcases multiple use cases and features of the field-validation package:
+---
 
-1. **Basic Form with State Management** – Handle form submission, loading state, and API error handling using the Form component
-
-2. **Schema-Based Form Rendering** – Dynamically generate form fields using a centralized schema configuration
-
-3. **Step Form (Multi-Step Workflow)** – Multi-step form with step-wise validation and smooth navigation using StepForm
-
-4. **API Integration Handling** – Demonstrates async submission with loading indicators and error display support
-
-5. **Validation System** – Built-in validation rules like required fields, email validation, and custom rules
-
-6. **Layout Customization** – Ability to switch between different layouts (e.g., layoutThree) for better UI flexibility
-
-## Getting Started
-
-### Prerequisites
-
-- Node.js 18+ installed
-- npm, yarn, pnpm, or bun package manager
-
-### Installation
-
-The package is already installed. If you need to reinstall:
+## 📦 Installation
 
 ```bash
-npm install @webbycrown/formix
+npm install @webbycrown/react-formix
 ```
 
-### Running the Demo
-
-Start the development server:
+or
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+yarn add @webbycrown/react-formix
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the demo.
+---
 
+## 🔧 API
 
-### Key Props
+### `Formix(options)`
 
-### Form Props
+| Option            | Type     | Description                 |
+| ----------------- | -------- | --------------------------- |
+| `initialValues`   | object   | Initial form state          |
+| `validationRules` | object   | Validation rules per field  |
+| `onSubmit`        | function | Callback when form is valid |
 
-- `schema` (object)  
-  Defines form fields and validation rules.
+## ✨ Features
 
-- `onSubmit` (function)  
-  Callback triggered on form submit. Receives form data.
+### Core Features
 
-- `loading` (boolean)  
-  Shows loader UI when `true`.
+- Required validation
+- Email validation
+- Min / Max length
+- Pattern validation
+- Custom validation functions
 
-- `apiError` (string | null)  
-  Displays API error message after submission.
+### Advanced Features
 
-- `errorType` (string)  
-  Controls how validation errors are displayed.  
-  Supported values:
-  - `"beforeField"` → Show error above field
-  - `"afterField"` → Show error below field
-  - `"top"` → Show all errors at top
-  - `"popup"` → Show all errors in modal popup
+- Real-time validation
+- Field-level validation
+- Form-level validation
+- Async validation support
 
-- `type` (string)  
-  Controls layout design.  
-  Supported values:
-  - `"layoutTwo"`
-  - `"layoutThree"`  
-    (default layout is applied if not provided)
+### 🎨 UI & Customization
 
-### StepForm Props
+- Custom HTML error messages (fully flexible UI)
+- Error icon customization (use icons, image)
+- Error image support for visual validation feedback
+- Fully customizable error message styling
 
-- `schema` (object)  
-  Defines multi-step structure with fields per step.
+### 🧩 Layout & Form Variants
 
-- `onSubmit` (function)  
-  Called when final step is submitted.
+- Multiple form layouts (default, custom UI support)
+- Step Form (multi-step form support)
+- Dynamic field rendering
+- Flexible structure for complex forms
 
-- `loading` (boolean)  
-  Shows loading state.
+### ⚡ Developer Experience
 
-- `apiError` (string | null)  
-  Displays API error.
+- Lightweight and fast
+- Easy integration
+- Reusable validation rules
+- Clean and scalable API
 
-- `errorType` (string)  
-  Same as Form (`beforeField`, `afterField`, `top`, `popup`)
+---
 
-- `stepShow` (boolean)  
-  Shows step indicator (progress UI) if `true`.
+## 🎨 Styling
 
-- `type` (string)  
-  Layout type (e.g. `"layoutTwo"`, `"layoutThree"`)
-
-### Field Configuration
-
-Each field supports:
-
-- `type` (string)  
-  Field type:
-  - `text`, `email`, `password`
-  - `textarea`
-  - `date`, `time`
-  - `select`
-  - `radio`
-  - `checkbox`
-  - `file`
-  - `dropzone`
-
-- `label` (string)  
-  Field label
-
-- `placeholder` (string)  
-  Input placeholder
-
-- `options` (array)  
-  Required for `select`, `radio`, `checkbox`  
-  Example:
-  { label: "India", value: "india" }
-
-- `multiSelect` (boolean)  
-  Enables multi-select dropdown
-
-- `accept` (string)  
-  File types for file/dropzone input
-
-- `errorIcon` (JSX)  
-  Custom icon for error display
-
-- `rules` (object)  
-  Validation rules (see below)
-
-### Validation Rules
-
-- `required` (boolean)
-- `requiredMessage` (string)
-
-- `minLength` (number)
-- `maxLength` (number)
-
-- `email` (boolean)
-
-- `pattern` (RegExp)
-- `patternMessage` (string)
-
-- `validate` (function)  
-  Custom validation function
-
-  Return values:
-  - `true` → valid
-  - `"string"` → error message
-  - `JSX` → custom error UI
-
-## Project Structure
-
-```
-src/
-  app/
-    layout.js      # Root layout with metadata
-    page.js        # Main demo page with multiple examples
-    globals.css    # Global styles
+```js
+import "@webbycrown/react-formix/dist/styles.css";
 ```
 
-## Features
+You can override styles with your own CSS.
 
-- ✅ Schema-based form validation
-- ✅ Multi-step form support (StepForm)
-- ✅ Multiple layouts (default, layoutTwo, layoutThree)
-- ✅ Flexible error handling:
-  - Field level (`beforeField`, `afterField`)
-  - Global top error summary (`beforField`)
-  - Popup modal errors (`popup`)
-- ✅ Custom error UI support (JSX / HTML)
-- ✅ Error icon support per field
-- ✅ Step-wise validation (only current step errors)
-- ✅ API integration with loading & error states
-- ✅ Success screen with submitted data preview
-- ✅ Multi-select dropdown support
-- ✅ Image support in radio & checkbox fields
-- ✅ File upload & drag-and-drop (dropzone) support
-- ✅ Date & time input support
-- ✅ Fully controlled form behavior
-- ✅ Dynamic and reusable schema structure
-- ✅ Easy global styling via CSS import
+---
 
-## Learn More
+### Registration Form
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🔒 Security
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Prevents invalid form submission
+- Supports custom validation logic
+- Safe input handling
 
-## Deploy on Vercel
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📚 Compatibility
+
+| Framework | Supported |
+| --------- | --------- |
+| React     | 16.8+     |
+| Next.js   | 10+       |
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to open issues or submit pull requests.
+
+---
+
+## 📄 License
+
+MIT License
+
+---
+
+## 💡 Tips
+
+- Use reusable validation rules
+- Combine with UI libraries (Tailwind, MUI, etc.)
+- Extend with custom validators
+
+---
+
+## 🔖 Changelog
+
+### 1.0.0
+
+- Initial release ✨
+- Core validation system
+- Form and Step-form support
+
+---
+
+<div align="center">
+<strong>Made with ❤️ by <a href="https://webbycrown.com">WebbyCrown</a></strong>
+</div>
