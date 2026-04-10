@@ -76,7 +76,7 @@ yarn add @webbycrown/react-formix
 ## 🎨 Styling
 
 ```js
-import "@webbycrown/react-formix/dist/styles.css";
+import "@webbycrown/react-formix/dist/index.css";
 ```
 
 You can override styles with your own CSS.
