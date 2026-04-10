@@ -1,5 +1,5 @@
 {
-    "name": "react-formix",
+    "name": "@webbycrown/react-formix",
     "version": "1.0.0",
     "description": "react-formix package",
     "main": "dist/index.js",
