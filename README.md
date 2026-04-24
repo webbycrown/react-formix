@@ -9,6 +9,18 @@ A production-ready, flexible, and developer-friendly form and step-form validati
 
 ---
 
+## 🎥 Demo Video
+
+**Watch the React Formix in action on YouTube:**
+
+<div align="center">
+
+[![React Formix Demo](https://raw.githubusercontent.com/webbycrown/react-advanced-richtext-editor/main/assets/react-advanced-richtext-editor.png)](https://www.youtube.com/watch?v=ejRuLu6furw)
+
+**▶️ [Watch on YouTube](https://www.youtube.com/watch?v=jP7pDK3vW5Y)**
+
+</div>
+
 ## 📦 Installation
 
 ```bash
@@ -56,6 +68,14 @@ yarn add @webbycrown/react-formix
 - Error icon customization (use icons, image)
 - Error image support for visual validation feedback
 - Fully customizable error message styling
+- Group Form Support (organize fields into sections/groups)
+- Dependent Fields (show/hide fields based on other field values)
+- Step Form with Customization (multi-step forms with full UI control)
+- Dynamic Field Rendering (schema or API-based)
+- Exam Form Mode (quiz & assessment forms)
+- Conditional Validation
+- API-based dropdowns and dynamic data fields
+- Smart field behavior handling
 
 ### 🧩 Layout & Form Variants
 
@@ -70,6 +90,8 @@ yarn add @webbycrown/react-formix
 - Easy integration
 - Reusable validation rules
 - Clean and scalable API
+- Schema-driven architecture
+- Works with static & dynamic data
 
 ---
 
@@ -131,6 +153,15 @@ MIT License
 - Initial release ✨
 - Core validation system
 - Form and Step-form support
+
+### 1.1.0
+
+- Group Form support added
+- Dependent field logic introduced
+- Step form customization improved
+- Exam form layout added
+- Custom HTML error UI enhancements
+- Dynamic API-based fields support
 
 ---
 
